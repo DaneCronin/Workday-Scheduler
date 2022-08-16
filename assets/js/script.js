@@ -1,11 +1,58 @@
 //Declare variables 
 
+var timeBlock = [
+    {
+        time: "9:00 am",
+        timeValue: "9",
+        userInput: "",
+    },
+    {
+        time: "10:00 am",
+        timeValue: "10",
+        userInput: "",
+    },
+    {
+        time: "11:00 am",
+        timeValue: "11",
+        userInput: "",
+    },
+    {
+        time: "12:00 pm",
+        timeValue: "12",
+        userInput: "",
+    },
+    {
+        time: "1:00 pm",
+        timeValue: "13",
+        userInput: "",
+    },
+    {
+        time: "2:00 pm",
+        timeValue: "14",
+        userInput: "",
+    },
+    {
+        time: "3:00 pm",
+        timeValue: "15",
+        userInput: "",
+    },
+    {
+        time: "4:00 pm",
+        timeValue: "16",
+        userInput: "",
+    },
+    {
+        time: "5:00 pm",
+        timeValue: "17",
+        userInput: "",
+    },
+]
 
-// ** create a function to display a daily schedule that shows hourly time blocks **//
+
+
+// ** create functions to display/populate a daily schedule that shows hourly time blocks **//
 
 // create a function to create/generate rows to fill daily schedule in hour-rows
-
-// create a function to generate hour time block for each row of daily schedule
 
 
 // function to add and save tasks by time
