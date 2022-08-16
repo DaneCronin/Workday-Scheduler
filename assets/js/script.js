@@ -54,10 +54,11 @@ var timeBlock = [
 // ** create functions to display/populate a daily schedule that shows hourly time blocks **//
 
 // Function to show current date and time 
+$(document).ready(function () {
 const datetime = moment();
 console.log(datetime.format('dddd MMMM Do YYYY, h:mm:ss a'));
-$("#currentDay").text(datetime);
-
+$("#currentDay").text(datetime.format("dddd MMM Do YYYY"));
+});
 
 // create a function to create/generate rows to fill daily schedule in hour-rows
 $(timeBlock).each(function (i) {
@@ -72,6 +73,8 @@ $(timeBlock).each(function (i) {
 });
 console.log("timeblock");
 
+    
+
 // Label the hour blocks and create class for hour blocks.  Append to the rows 
 $("div.row").each(function (i) {
     //Variables for each time-block row and column
@@ -79,8 +82,10 @@ $("div.row").each(function (i) {
     var labelCol = $("<div>");
     var inputCol = $("<div>");
 
-  console.log("hours");
+    console.log("hours");
 });
+
+
 
 
 // function to add and save tasks by time
