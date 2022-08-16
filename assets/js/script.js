@@ -1,4 +1,4 @@
-//Declare variables 
+//Declare variables for time blocks from 9am to 5pm 
 
 var timeBlock = [
     {
@@ -52,7 +52,20 @@ var timeBlock = [
 
 // ** create functions to display/populate a daily schedule that shows hourly time blocks **//
 
+// Function to show current date and time 
+
 // create a function to create/generate rows to fill daily schedule in hour-rows
+$(timeBlock).each(function (i) {
+    //variable row to store each timeBlock
+    var row = $("div");
+    if (i < $(timeBlock).length) {
+        console.log("timeblock");
+        row
+        .addClass("row")
+        $(".container").append(row);
+    }
+    i++
+});
 
 
 // function to add and save tasks by time
