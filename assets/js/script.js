@@ -46,13 +46,16 @@ var timeBlock = [
         timeValue: "17",
         userInput: "",
     },
-]
+];
+
 
 
 
 // ** create functions to display/populate a daily schedule that shows hourly time blocks **//
 
 // Function to show current date and time 
+const datetime = moment();
+console.log(datetime.format('dddd MMMM Do YYYY, h:mm:ss a'));
 
 
 // create a function to create/generate rows to fill daily schedule in hour-rows
