@@ -62,7 +62,7 @@ $("#currentDay").text(datetime.format("dddd MMM Do YYYY"));
 
 // create a function to create/generate rows to fill daily schedule in hour-rows
 $(timeBlock).each(function (i) {
-    //variable row to store each timeBlock
+    //variable for a new row to store each timeBlock
     var row = $("div");
     if (i < $(timeBlock).length) {
         row
@@ -70,20 +70,21 @@ $(timeBlock).each(function (i) {
         $(".container").append(row);
     }
     i++
+
+    // Label the hour blocks and create class for hour blocks.  Append to the rows 
+var timeColumn = $("<div>");
+timeColumn.addClass("col-2 hour");
+
+// add the time to the time blocks
+timeColumn.text(timeBlock.timeValue);
+row.append(timeColumn);
+
 });
+
 console.log("timeblock");
 
     
 
-// Label the hour blocks and create class for hour blocks.  Append to the rows 
-$("div.row").each(function (i) {
-    //Variables for each time-block row and column
-    var timeValue = timeBlock[i].timeValue;
-    var labelCol = $("<div>");
-    var inputCol = $("<div>");
-
-    console.log("hours");
-});
 
 
 
