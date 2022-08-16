@@ -60,22 +60,31 @@ console.log(datetime.format('dddd MMMM Do YYYY, h:mm:ss a'));
 $("#currentDay").text(datetime.format("dddd MMM Do YYYY"));
 });
 
+
 // create a function to create/generate rows to fill daily schedule in hour-rows
-$(timeBlock).each(function (i) {
-    //variable for a new row to store each timeBlock
-    var row = $("div");
-    if (i < $(timeBlock).length) {
-        row.addClass("row time-block")
-        $(".container").append(row);
-    }
-    i++
+for (var i = 0; i < timeBlock.length; i++) {
+    
+    var hour = new Date().getHours();
+    var row = $("<div>");
+    row.addClass("row time-block");
+    $(".container").append(row);
+
+
+// $(timeBlock).each(function (i) {
+//     //variable for a new row to store each timeBlock
+//     var row = $("div");
+//     if (i < $(timeBlock).length) {
+//         row.addClass("row time-block")
+//         $(".container").append(row);
+//     }
+//     i++
 
     // Label the hour blocks and create class for hour blocks.  Append to the rows 
 var timeColumn = $("<div>");
 timeColumn.addClass("col-sm-2 hour");
 
 // add the time to the time blocks
-timeColumn.text(timeBlock.timeValue);
+timeColumn.text(timeBlock[i].time);
 row.append(timeColumn);
 
 // Create a column for the text/events area
@@ -89,7 +98,7 @@ var saveBtn = $("<button>");
 saveBtn.addClass("col-sm-2 saveBtn");
 row.append(saveBtn);
 
-});
+};
 
 console.log("timeblock");
 
