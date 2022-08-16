@@ -56,6 +56,7 @@ var timeBlock = [
 // Function to show current date and time 
 const datetime = moment();
 console.log(datetime.format('dddd MMMM Do YYYY, h:mm:ss a'));
+$("#currentDay").text(datetime);
 
 
 // create a function to create/generate rows to fill daily schedule in hour-rows
