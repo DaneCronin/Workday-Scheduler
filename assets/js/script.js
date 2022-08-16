@@ -54,6 +54,7 @@ var timeBlock = [
 
 // Function to show current date and time 
 
+
 // create a function to create/generate rows to fill daily schedule in hour-rows
 $(timeBlock).each(function (i) {
     //variable row to store each timeBlock
