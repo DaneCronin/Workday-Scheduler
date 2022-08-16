@@ -117,8 +117,6 @@ function colorBlock(hour) {
 
 
 
-    
-
 
 // function to add and save tasks by time
 function saveEvent() {
@@ -140,6 +138,26 @@ function saveEvent() {
         }
 
     });
+
+}
+
+// create function to save user text input when page is reloaded with localStorage
+function getUsersText() {
+    //variables to load stored data
+    var storedTime = JSON.parse(localStorage.getItem("Time"));
+    var storedText = JSON.parse(localStorage.getItem("Text"));
+
+    if ((storedTime !== null) && storedText !== null) {
+        timeBlock[i].timeValue = storedTime;
+        timeBlock[i].userInput = storedText;
+
+        for (var i = 0; i < timeBlock[i].userInput; i++) {
+            if (timeColumn.text() ===  timeBlock[i].timeValue){
+                eventBlock.text(timeBlock[i].userInput);
+            }
+
+        }
+    }
 
 }
 
