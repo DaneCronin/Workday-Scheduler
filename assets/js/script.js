@@ -102,20 +102,27 @@ function saveEvent() {
     saveBtn.on("click", function () {
         var saveEventTime = $(this).siblings("div").text();
         var usersText = $(this).siblings("textarea").val();
+        
         console.log(usersText);
 
+        if (usersText !== "") {
+            timeBlock[i].timeValue.push(saveEventTime);
+           timeBlock[i].userInput.push(usersText);
 
+        // store userInput and time entered to local storage
 
+         localStorage.setItem("Time", JSON.stringify(timeBlock[i].timeValue));
+         localStorage.setItem("Text", JSON.stringify(timeBlock[i].userInput));
 
-    })
+        }
+
+    });
+
 }
 
-
-// function to edit and delete tasks
 
 // function to check if current row time is past, present or future compared to hours-rows
 
 
 // update and color- code Hour-row/tasks based on whether it is past, current or a future task
 
-// create function to store row to local storage
