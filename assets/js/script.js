@@ -1,5 +1,8 @@
 //Declare variables for time blocks from 9am to 5pm 
 
+
+var m = moment();
+
 var timeBlock = [
     {
         time: "9:00 am",
@@ -23,27 +26,27 @@ var timeBlock = [
     },
     {
         time: "1:00 pm",
-        timeValue: "13",
+        timeValue: "1",
         userInput: "",
     },
     {
         time: "2:00 pm",
-        timeValue: "14",
+        timeValue: "2",
         userInput: "",
     },
     {
         time: "3:00 pm",
-        timeValue: "15",
+        timeValue: "3",
         userInput: "",
     },
     {
         time: "4:00 pm",
-        timeValue: "16",
+        timeValue: "4",
         userInput: "",
     },
     {
         time: "5:00 pm",
-        timeValue: "17",
+        timeValue: "5",
         userInput: "",
     },
 ];
@@ -55,7 +58,7 @@ var timeBlock = [
 
 // Function to show current date and time 
 $(document).ready(function () {
-const datetime = moment();
+var datetime = moment();
 console.log(datetime.format('dddd MMMM Do YYYY, h:mm:ss a'));
 $("#currentDay").text(datetime.format("dddd MMM Do YYYY"));
 });
@@ -81,7 +84,7 @@ row.append(timeColumn);
 
 // Create a column for the text/events area
 var eventBlock = $("<textarea>");
-eventBlock.addClass("description col-sm-8 textarea");
+eventBlock.addClass("description col-sm-8 textarea").text(timeBlock[i].userInput);
 // append the event block to the rows 
 row.append(eventBlock);
 
@@ -102,10 +105,10 @@ console.log("timeblock");
 
 // function to check if current row time is past, present or future and change text area color based on current time
 function colorBlock(hour) {
-    if (timeBlock[i].time < hour) {
+    if (timeBlock[i].timeValue < hour) {
         eventBlock.addClass("past");
     }
-    else if (timeBlock[i].time == hour) {
+    else if (timeBlock[i].timeValue == hour) {
         eventBlock.addClass("present");
     }
     else {
