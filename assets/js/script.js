@@ -87,7 +87,8 @@ row.append(eventBlock);
 
 // create third column for a save button
 var saveBtn = $("<button>");
-saveBtn.addClass("col-sm-2 saveBtn");
+saveBtn.addClass("col-sm-2 saveBtn").text("Save");
+saveBtn.addClass("saveBtn i:hover");
 row.append(saveBtn);
 
 //Functions
