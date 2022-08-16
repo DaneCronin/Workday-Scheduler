@@ -1,7 +1,6 @@
 //Declare variables for time blocks from 9am to 5pm 
 
 
-var m = moment();
 
 var timeBlock = [
     {
@@ -26,27 +25,27 @@ var timeBlock = [
     },
     {
         time: "1:00 pm",
-        timeValue: "1",
+        timeValue: "13",
         userInput: "",
     },
     {
         time: "2:00 pm",
-        timeValue: "2",
+        timeValue: "14",
         userInput: "",
     },
     {
         time: "3:00 pm",
-        timeValue: "3",
+        timeValue: "15",
         userInput: "",
     },
     {
         time: "4:00 pm",
-        timeValue: "4",
+        timeValue: "16",
         userInput: "",
     },
     {
         time: "5:00 pm",
-        timeValue: "5",
+        timeValue: "17",
         userInput: "",
     },
 ];
