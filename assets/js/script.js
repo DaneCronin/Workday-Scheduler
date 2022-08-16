@@ -59,12 +59,22 @@ $(timeBlock).each(function (i) {
     //variable row to store each timeBlock
     var row = $("div");
     if (i < $(timeBlock).length) {
-        console.log("timeblock");
         row
         .addClass("row")
         $(".container").append(row);
     }
     i++
+});
+console.log("timeblock");
+
+// Label the hour blocks and create class for hour blocks.  Append to the rows 
+$("div.row").each(function (i) {
+    //Variables for each time-block row and column
+    var timeValue = timeBlock[i].timeValue;
+    var labelCol = $("<div>");
+    var inputCol = $("<div>");
+
+  console.log("hours");
 });
 
 
