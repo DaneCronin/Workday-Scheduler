@@ -65,19 +65,11 @@ $("#currentDay").text(datetime.format("dddd MMM Do YYYY"));
 for (var i = 0; i < timeBlock.length; i++) {
     
     var hour = new Date().getHours();
+    // variable for a new row.
     var row = $("<div>");
     row.addClass("row time-block");
     $(".container").append(row);
 
-
-// $(timeBlock).each(function (i) {
-//     //variable for a new row to store each timeBlock
-//     var row = $("div");
-//     if (i < $(timeBlock).length) {
-//         row.addClass("row time-block")
-//         $(".container").append(row);
-//     }
-//     i++
 
     // Label the hour blocks and create class for hour blocks.  Append to the rows 
 var timeColumn = $("<div>");
@@ -105,10 +97,18 @@ console.log("timeblock");
     
 
 
-
-
-
 // function to add and save tasks by time
+function saveEvent() {
+    saveBtn.on("click", function () {
+        var saveEventTime = $(this).siblings("div").text();
+        var usersText = $(this).siblings("textarea").val();
+        console.log(usersText);
+
+
+
+
+    })
+}
 
 
 // function to edit and delete tasks
