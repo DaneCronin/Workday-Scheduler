@@ -90,9 +90,29 @@ var saveBtn = $("<button>");
 saveBtn.addClass("col-sm-2 saveBtn");
 row.append(saveBtn);
 
+//Functions
+colorBlock(hour);
+saveEvent();
+
 };
 
 console.log("timeblock");
+
+
+// function to check if current row time is past, present or future and change text area color based on current time
+function colorBlock(hour) {
+    if (timeBlock[i].time < hour) {
+        eventBlock.addClass("past");
+    }
+    else if (timeBlock[i].time == hour) {
+        eventBlock.addClass("present");
+    }
+    else {
+        eventBlock.addClass("future");
+    }
+}
+
+
 
     
 
@@ -120,9 +140,4 @@ function saveEvent() {
 
 }
 
-
-// function to check if current row time is past, present or future compared to hours-rows
-
-
-// update and color- code Hour-row/tasks based on whether it is past, current or a future task
 
