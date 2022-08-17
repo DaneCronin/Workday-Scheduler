@@ -95,7 +95,6 @@ row.append(saveBtn);
 
 //Functions
 colorBlock(hour);
-saveEvent();
 getUsersText();
 
 };
@@ -124,25 +123,26 @@ function colorBlock(hour) {
 
 
 // function to add and save tasks by time
-function saveEvent() {
-    saveBtn.on("click", function () {
-        var saveEventTime = $(this).siblings("div").text();
-        var usersText = $(this).siblings("textarea").val();
+function saveEvent(event) {
+    console.log(event);
+    // saveBtn.on("click", function () {
+    //     var saveEventTime = $(this).siblings("div").text();
+    //     var usersText = $(this).siblings("textarea").val();
         
-        console.log(usersText);
+    //     console.log(usersText);
 
-        if (usersText !== "") {
-            timeBlock[i].timeValue.push(saveEventTime);
-           timeBlock.userInput.push(usersText);
+    //     if (usersText !== "") {
+    //         timeBlock[i].timeValue.push(saveEventTime);
+    //        timeBlock.userInput.push(usersText);
 
-        // store userInput and time entered to local storage
+    //     // store userInput and time entered to local storage
 
-         localStorage.setItem("Time", JSON.stringify(timeBlock[i].timeValue));
-         localStorage.setItem("Text", JSON.stringify(timeBlock[i].userInput));
+    //      localStorage.setItem("Time", JSON.stringify(timeBlock[i].timeValue));
+    //      localStorage.setItem("Text", JSON.stringify(timeBlock[i].userInput));
 
-        }
+    //     }
 
-    });
+    // });
 
 }
 
@@ -166,4 +166,4 @@ function getUsersText() {
 
 }
 
-
+$(".saveBtn").click(saveEvent);
