@@ -1,6 +1,6 @@
 //Declare variables for time blocks from 9am to 5pm 
 
-
+var today = moment();
 
 var timeBlock = [
     {
@@ -59,7 +59,7 @@ var timeBlock = [
 $(document).ready(function () {
 var datetime = moment();
 console.log(datetime.format('dddd MMMM Do YYYY, h:mm:ss a'));
-$("#currentDay").text(datetime.format("dddd MMM Do YYYY"));
+$("#currentDay").text(datetime.format("LLLL"));
 });
 
 
@@ -96,10 +96,11 @@ row.append(saveBtn);
 //Functions
 colorBlock(hour);
 saveEvent();
+getUsersText();
 
 };
 
-console.log("timeblock");
+//console.log("timeblock");
 
 
 // function to check if current row time is past, present or future and change text area color based on current time
@@ -109,9 +110,13 @@ function colorBlock(hour) {
     }
     else if (timeBlock[i].timeValue == hour) {
         eventBlock.addClass("present");
+        eventBlock.removeClass("past");
+        eventBlock.removeClass("future");
     }
     else {
         eventBlock.addClass("future");
+        eventBlock.removeClass("present");
+        eventBlock.removeClass("past");
     }
 }
 
@@ -128,7 +133,7 @@ function saveEvent() {
 
         if (usersText !== "") {
             timeBlock[i].timeValue.push(saveEventTime);
-           timeBlock[i].userInput.push(usersText);
+           timeBlock.userInput.push(usersText);
 
         // store userInput and time entered to local storage
 
