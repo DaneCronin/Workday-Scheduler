@@ -5,7 +5,7 @@ Create a simple calendar application that allows a user to save events for each 
 
 ## Built With 
 
-*HTML
+* HTML
 * CSS
 * Javascript
 * jQuery
@@ -13,6 +13,14 @@ Create a simple calendar application that allows a user to save events for each 
 * Moment.js
 * FontAwesome
 * GoogleFonts
+
+## Website Deployed Here: 
+
+https://danecronin.github.io/Workday-Scheduler/
+
+
+![image](https://user-images.githubusercontent.com/107944830/185283171-267325b6-aa97-4b70-9f5e-ca314e32653f.png)
+
 
 
 
